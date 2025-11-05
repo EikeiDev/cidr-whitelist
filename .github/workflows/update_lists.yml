@@ -38,11 +38,6 @@ jobs:
       - name: Generating CIDR Lists
         run: python3 ./generate_cidr.py
 
-      - name: Update IP count in README.md
-        run: |
-          TOTAL_IPS=$(cat ipv4_list.txt | wc -l)
-          sed -i "s|$(grep -oP '\d+(?=\*\*$)' README.md)|$TOTAL_IPS|1" README.md
-
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
