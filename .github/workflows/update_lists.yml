@@ -42,7 +42,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add ipv4_list.txt cidr4.txt README.md
+          git add ipv4_list.txt cidr4.txt
           git commit -m 'Updated Lists [Automated]'
           git pull
           git push
